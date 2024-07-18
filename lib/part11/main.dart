@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:test/part11/checkkk.dart';
 import 'package:test/part11/create.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:test/part11/wake.dart';
 
 void main() {
   runApp(MyApp());
@@ -87,15 +86,6 @@ class _MyHomePageState extends State<MyHomePage> {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => CreateScreen()),
-                              );
-                            },
-                          ),
-                          ElevatedButton(
-                            child: Text('wake up now!'),
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => Wake()),
                               );
                             },
                           ),

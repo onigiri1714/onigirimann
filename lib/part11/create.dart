@@ -16,7 +16,7 @@ class _CreateScreenState extends State<CreateScreen> {
       backgroundColor: const Color.fromARGB(255, 251, 223, 176),
       appBar: AppBar(
         title: Text(
-          '🍞',
+          'Return📝',
           style: TextStyle(color: Colors.black),
         ),
         backgroundColor: const Color.fromARGB(255, 251, 223, 176),
@@ -26,10 +26,10 @@ class _CreateScreenState extends State<CreateScreen> {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Text(
-              'New Item',
+              'Lost item registration',
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: 50,
+                fontSize: 35,
                 color: Colors.black,
                 fontWeight: FontWeight.w400,
                 fontStyle: FontStyle.italic,
@@ -40,7 +40,7 @@ class _CreateScreenState extends State<CreateScreen> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Text(
-              'Enter the item you want to register',
+              'Please add the items you want to register.',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 20,
@@ -86,7 +86,7 @@ class _CreateScreenState extends State<CreateScreen> {
                   });
                 },
                 icon: Icon(Icons.add),
-                label: const Text('ADD'),
+                label: const Text('Add'),
               ),
               SizedBox(width: 20),
               ElevatedButton.icon(
@@ -107,7 +107,7 @@ class _CreateScreenState extends State<CreateScreen> {
                   });
                 },
                 icon: Icon(Icons.remove),
-                label: Text('DELETE!'),
+                label: Text('Delete'),
               ),
             ],
           ),
@@ -122,14 +122,15 @@ class _CreateScreenState extends State<CreateScreen> {
           ),
           ElevatedButton(
             onPressed: () {
+              List<String> items = _controllers.map((controller) => controller.text).toList();
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => Checkkk(),
+                  builder: (context) => Checkkk(items: items),
                 ),
               );
             },
-            child: const Text('GO to Check Screen'),
+            child: const Text('Register'),
           ),
           Padding(padding: const EdgeInsets.all(20)),
         ],
